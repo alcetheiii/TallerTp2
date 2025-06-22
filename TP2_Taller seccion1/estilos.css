@@ -1,0 +1,50 @@
+@font-face{
+    font-family: "outfit";
+    src:url(/img/tipografia/Outfit-SemiBold.ttf);
+}
+.navbar{
+    background-color: aqua;
+}
+body{
+    background-color: bisque;
+}
+.seccion1{
+    display: flex;
+    justify-content: center;
+    font-family: "outfit";
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+   
+}
+.elemento1{ 
+    margin-bottom: 40px;
+    margin-right: 70px;
+}
+.elemento1 h5{ /* probar con text align para que no sea tan centrado*/
+    margin-top: 35%;
+}
+.elemento2{
+    margin-right: 70px;
+    
+}
+.elemento2 h5{
+    margin-top: 35%;
+}
+.elemento3 h5{
+    font-size: 36px;
+    margin-top: 70%;
+}
+.elemento4{
+    margin-left: 70px;
+    margin-bottom: 40px;
+}
+.elemento4 h5{
+    margin-top: 35%;
+}
+.elemento5{
+    margin-left: 70px;
+}
+.elemento5 h5{
+    margin-top: 35%;
+}
