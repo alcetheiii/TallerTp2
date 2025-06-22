@@ -1,20 +1,72 @@
 @font-face{
-    font-family: outfit;
+    font-family:outfit;
     src:url(Outfit-SemiBold.ttf);
 }
-
-h1{
-    
+/*Esto es para poner la fuente globalmente*/
+body{
+    font-family: outfit;
+    font-size: 14px;
 }
 
-h2{
+.Seccion3{
+margin: 10%;
+}
+
+/*
+CSS especifico de la seccion3, Usar .seccion3
+en si para cosas del tamaño.
+Todos los valores de abajo se hicieron en porcentaje
+para que sea facil de mover (Excepto por img)
+*/
+
+/*para que el divider aparezca y se vea*/
+.Divider{
+    border: 1px;
+    border-style:groove;
+    margin: 1%;
+}
+
+/*Para que las cards queden en fila*/
+.Seccion3-Categoria{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Para ordenar las cards correctamente*/
+.Seccion3-Card{
+    margin-right: 5%;
+    width: 50%;
+    display: grid;
+    grid-template-areas: 
+    "img title"
+    "img subtitle";
+    gap: 15px;
+}
+
+/*Para que la imagen se vea correctamente*/
+.Seccion3-Card img{
+    object-fit: cover;
+    border-radius: 10px;
+    grid-area:img;
+    /*Esto no se puede cambiar a porcentaje porque
+    funciona en base a la imagen no al contenedor*/
+    width: 200px;
+    height: 220px;
+}
+
+/*para que el titulo entre bien / tenga underline */
+.Seccion3-Card h2{
+    grid-area: title;
+    text-decoration: underline;
+    width: 90%;
 
 }
 
-h3{
-
-}
-
-p{
+/*Para que el subtexto se vea distinto al titulo
+  Tal vez hacer esto global*/
+.Seccion3-Card h3{
+    grid-area: subtitle;
+    font-weight: 100;
+    color: grey;
 
 }
