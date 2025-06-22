@@ -1,18 +1,20 @@
-body{
-
+@font-face{
+    font-family: outfit;
+    src:url(Outfit-SemiBold.ttf);
 }
+
 h1{
-
+    
 }
+
 h2{
 
 }
+
 h3{
 
 }
+
 p{
 
 }
-/*#region Atomos*/
-
-/*#endregion atomos*/
