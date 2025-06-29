@@ -1,0 +1,633 @@
+/*  reseteo de padding y margin */
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+/* scroll suave */
+html{
+  scroll-behavior: smooth;
+}
+/*fuente*/
+@font-face{
+  font-family: outfit;
+  src:url(Outfit-SemiBold.ttf);
+}
+p{
+  font-family: outfit, sans-serif;
+}
+a{
+  font-family: outfit, sans-serif;
+}
+/*Esto es para poner la fuente globalmente*/
+body{
+    font-family: outfit;
+    font-size: 14px;
+}
+
+/*-------------------------ENCABEZADO----------------------------*/
+.logo{
+  background-color: #1B1B1B;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/sección2/imgFondo.png);
+  background-repeat: no-repeat;
+  background-position: 50px 0px;
+}
+.logo img{
+  margin-left: 500px;
+}
+
+.barra-nav {
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px 0px; /*Encontrar una manera de ajustar la box perfectamente a la barra*/
+  display: flex;
+  justify-content: center;
+}
+
+.lista-nav {
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-nav li a {
+  white-space: nowrap; /*esto es para q el "cine y series" no rompa toda la barra de navegacion*/
+  text-decoration: none;
+  color: rgb(94, 92, 92);
+  background-color: #ffffff;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.lista-nav li a:hover {
+  background-color: #16B9F8;
+  color:#ffffff;
+  box-shadow: inset 0px 0px 5px rgb(90, 90, 90);
+}
+
+/*---------------------SECCIÓN 01-------------------------*/
+.seccion1{
+    display: flex;
+    justify-content: center;
+    font-family: "outfit";
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+   
+}
+.elemento1{ 
+    margin-bottom: 40px;
+    margin-right: 70px;
+}
+.elemento1 h5{ /* probar con text align para que no sea tan centrado*/
+    margin-top: 35%;
+}
+.elemento2{
+    margin-right: 70px;
+    
+}
+.elemento2 h5{
+    margin-top: 35%;
+}
+.elemento3 h5{
+    font-size: 36px;
+    margin-top: 70%;
+    
+}
+.elemento3 a{
+  color: rgb(255, 255, 255);
+
+}
+.elemento4{
+    margin-left: 70px;
+    margin-bottom: 40px;
+}
+.elemento4 h5{
+    margin-top: 35%;
+}
+.elemento5{
+    margin-left: 70px;
+}
+.elemento5 h5{
+    margin-top: 35%;
+}
+
+
+/*-------------------------SECCIÓN 02-------------------------*/
+.seccion2{
+  background-color: #1B1B1B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  /*fondo*/
+  width: 100%;
+  height: 500px;
+  background-image: url(img/sección2/imgFondo.png);
+  background-repeat: no-repeat;
+  background-position: 50px 0px;
+
+}
+.contenedor-sec2{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-principal{
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+.img-superpuesta{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 30px;
+}
+.texto-sec2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  /*esto genera un borde corte "stroke" en las letras para q contrasten con el fondo y sean más legibles*/
+  text-shadow:-1px -1px 0 #2b2b2b, 1px -1px 0 #2b2b2b, -1px  1px 0 #2b2b2b, 1px  1px 0 #2b2b2b;
+
+  /* --- Animación de subrayado --- */
+  text-decoration: none;
+  background-image: linear-gradient(#00BFFF, #00BFFF);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px; 
+  transition: background-size 0.3s ease-out;
+}
+
+.texto-sec2:hover {
+  background-size: 100% 2px;
+}
+
+
+/*-------------------------SECCIÓN 03-------------------------*/
+
+/*
+CSS especifico de la seccion3, Usar .seccion3
+en si para cosas del tamaño.
+Todos los valores de abajo se hicieron en porcentaje
+para que sea facil de mover (Excepto por img)
+*/
+.Seccion3{
+  margin-block: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+/*Para que la imagen se vea correctamente*/
+.Seccion3 img{
+  object-fit: cover;
+  border-radius: 10px;
+  grid-area:img;
+  /*Esto no se puede cambiar a porcentaje porque
+  funciona en base a la imagen no al contenedor*/
+  width: 200px;
+  height: 220px;
+}
+
+/*Para que el subtexto se vea distinto al titulo
+  Tal vez hacer esto global*/
+.Seccion3 h3{
+  font-size: 18px;
+  grid-area: subtitle;
+  font-weight: 100;
+  color: grey;
+
+}
+
+/*para que las secciones azules se 
+vean de manera correcta, requieren un monton
+de ajustes por lo distintas que son*/
+.Seccion3 h4{
+  text-decoration: none;
+  border-radius: 10px;
+  grid-area: promo;
+  font-size: 24px;
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+  color: white;
+  width:fit-content;
+  height: fit-content;
+  margin:0%;
+  font-weight: 100;
+  background-color: rgb(0, 128, 255);
+}
+
+
+/*para que el divider aparezca y se vea*/
+.Divider{
+  border: 1px;
+  border-style:groove;
+  margin: 1%;
+  margin-top: 1rem;
+}
+
+/*Una cosa rapida para no tener que reorganizar
+todo el organismo*/
+.Categoria-Titulo {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+}
+
+/*Para que las cards queden en fila*/
+.Seccion3-Categoria{
+  display: flex;
+  flex-direction: row;
+}
+
+/*Para ordenar las cards correctamente*/
+.Seccion3-Card{
+  margin-block: 2rem;
+  margin-right: 5%;
+  width: 50%;
+  display: grid;
+  grid-template-areas: 
+  "img title"
+  "img subtitle"
+  "img promo";
+  gap: 15px;
+}
+
+/*para que el titulo entre bien / tenga underline */
+.Seccion3-Card h2{
+  font-size: 20px;
+  grid-area: title;
+  text-decoration: none;
+  width: 90%;
+}
+
+
+/*-------------------FOOTER-------------------*/
+footer{
+  background-color: #1B1B1B;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+
+  /*fondo*/
+  width: 100%;
+  height: 200px;
+  background-image: url(img/footer/fondo-fuder.png);
+  background-repeat: no-repeat;
+  background-position: 20px 0px;
+
+  /*fokin flexbox para q los fokin logos queden bien alineados*/
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  justify-content: center;
+}
+.contenedor-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+/*this deja todo alineadito y perfecto*/
+.contenedor-footer img {
+  height: 30px;
+  width: auto; 
+  object-fit: contain; 
+}
+footer p {
+  margin-top: 0; 
+}
+
+/*--------------para las paginas "cine y series"; "Agenda"---------------*/
+.cine{ 
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+/*para que el titulo entre bien / y sin underline */
+.nounderL{
+  grid-area: title;
+  text-decoration: none !important;
+  width: 90%;
+}
+/*para que el divider aparezca y se vea*/
+.Divideralterado{
+  border: 1px;
+  border-style:groove;
+  margin: 1%;
+  margin: 10px;
+}
+.Categoria-Titulo h2{
+  margin-top: 50px;
+}
+.Categoria-Titulo h4{
+  margin-top: 50px;
+}
+.Agenda{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+/*--------------para la pagina "Comunidad y Foro"---------------*/
+.rectnegro{
+  background-color: #1B1B1B;
+  font-family: outfit;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+  padding: 130px;
+}
+.rectceleste{
+  background-color: #16B9F8;
+  font-family: outfit;
+  font-size: 20;
+  color: #ffffff;
+  text-align: center;
+  padding: 80px;
+
+}
+.rainbowarriba{
+  margin-left: 50px;
+}
+.espacioforo{
+  display: flex;
+  justify-content: center;
+  background-color: #0E1113;
+  padding: 300px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+ 
+}
+.Lgris{
+   color: grey;
+}
+.marcas{
+  text-align: center;
+  font-size: 30px;
+  margin-block: 100px;
+}
+.marcas img{
+  margin-block: 20px;
+}
+.centrar{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.btn-propio{
+font-size: 30px !important;
+}
+
+/*--------------------------SECCIÓN NOTA----------------------------------*/
+
+.nota{
+margin-top: 2rem;
+display: flex; 
+flex-direction: row;
+gap: 2rem;
+padding: 2rem;
+min-height: 600px;
+align-items: flex-start;
+background-color: #ffffff; 
+}
+
+.contenido-principal{
+flex-grow: 1; 
+padding: 1.5rem; 
+color: #000000; 
+line-height: 1.6;
+border-right: 1px solid #4a5568;
+}
+.contenido-principal p{
+margin-bottom: 2.5rem;
+}
+.etiquetas{
+margin-top: 2rem;
+padding-top: 1.5rem;
+border-top: 1px solid #4a5568;
+text-align: left;
+}
+.etiquetas p{
+  text-align: left;
+}
+.etiquetas ul{
+list-style: none;
+padding: 0; 
+display: flex;
+flex-wrap: wrap; 
+justify-content: left; 
+gap: 0.75rem;
+}
+.etiquetas ul li{
+margin-bottom: 0;
+padding-bottom: 0;
+border-bottom: none;
+}
+.etiquetas ul li a{
+background-color: #a0a0a09a;
+color: #161616;
+padding: 0.5rem 1rem; 
+border-radius: 5px;
+text-decoration: none;
+white-space: nowrap; 
+transition: background-color 0.2s ease, color 0.2s ease;
+}
+.etiquetas ul li a:hover {
+background-color: #1b98a4; 
+color: #ffffff;
+text-decoration: none; 
+}
+
+.etiqueta-emo{
+margin-top: 2.5rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+margin-bottom: 2rem;
+border-bottom: 1px solid #4a5568;
+text-align: center;
+}
+.etiqueta-emo p{
+color: rgb(12, 198, 255);
+}
+.etiqueta-emo ul{
+list-style: none;
+padding: 0; 
+display: flex;
+flex-wrap: wrap; 
+justify-content: center;
+gap: 0.75rem;
+}
+.etiqueta-emo ul li{
+margin-bottom: 0;
+padding-bottom: 0;
+}
+.etiqueta-emo ul li a{
+background-color: #a0a0a09a;
+color: #161616;
+padding: 0.5rem 1rem; 
+border-radius: 5px;
+text-decoration: none;
+white-space: nowrap; 
+transition: background-color 0.2s ease, color 0.2s ease;
+}
+.etiqueta-emo ul li a:hover {
+background-color: #525353; 
+color: #ffffff;
+text-decoration: none; 
+}
+.text-hinchapija{
+  color: #00b7ff;
+}
+
+.compartir{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #4a5568;
+  margin-bottom: 2rem;
+}
+.compartir p{
+margin: 0;
+padding-right: 11rem;
+font-size: 1.125rem;
+color: #000000;
+white-space: nowrap;
+}
+
+.seguir-leyendo {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+}
+.seguir-leyendo h3 {
+  font-weight: 800;
+  color: #000000; 
+  font-size: 2rem; 
+  margin-bottom: 1.5rem;
+  /* Ya está alineado a la izquierda por 'align-items: flex-start' del padre */
+}
+.seguir-leyendo .contenedor-notas {
+  border-top: 1px solid #4a5568;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 2rem;
+  width: 100%;
+}
+.seguir-leyendo .nota-sugerida {
+  display: flex;
+  flex-direction: column; 
+  align-items: start;
+  text-align: start;
+  max-width: 280px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+.seguir-leyendo .nota-sugerida img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+}
+.seguir-leyendo .nota-sugerida p {
+  margin: 0;
+  text-align: start;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+/*------------------------------BARRA LATERAL AAAA------------------------------*/
+.barra-lateral{
+width: 250px;
+flex-shrink: 0; 
+padding: 1.5rem; 
+color: #000000;
+display: flex; 
+flex-direction: column;
+}
+
+.spotify{
+  margin-top: 5rem;
+  margin-left: -3rem;
+  margin-right: -2rem;
+}
+
+.barra-lateral h1{
+font-weight: 800; 
+font-size: 1.875rem;
+margin-bottom: 1rem;
+margin-left: -3.5rem;
+border-bottom: 1px solid #000000;
+color: #000000;
+}
+.barra-lateral a{
+text-decoration: none;
+color: #000000;
+}
+.barra-lateral ul{
+margin-left: -2.0rem;
+list-style: none; 
+padding: 0;
+}
+.barra-lateral ul li{
+margin-bottom: 0.75rem;
+padding: 0.75rem;
+border-bottom: 1px solid #4a5568;
+}
+.barra-lateral ul li p{
+font-weight: 400;
+font-size: 1rem;
+transition: color 0.2s ease;
+}
+.barra-lateral ul li p:hover{
+color: #00b7ff;
+}
+
+/*para q la ultima opcion de la lista no tenga un border-bottom*/
+.barra-lateral ul li:last-child{
+border-bottom: none;
+padding-bottom: 0;
+margin-bottom: 0;
+}
+.barra-lateral ul li:last-child p {
+background-color: #EFEFEF;
+text-align: center;
+color: #00c3ff;
+cursor: pointer;
+transition: linear 0.2s;
+}
+.barra-lateral ul li:last-child p:hover{
+background-color:#d1d1d1;
+transition: linear 0.2s;
+color: #0099ff; 
+text-decoration: none;
+}
